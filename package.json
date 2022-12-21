@@ -4,13 +4,24 @@
   "keywords": [
     "react",
     "create-react-app",
-    "template"
+    "redux",
+    "redux toolkit",
+    "redux-persist",
+    "react route",
+    "axios",
+    "ant design"
   ],
   "description": "The base client template for Create React App.",
   "repository": {
     "type": "git",
     "url": "https://github.com/x447618716/cra-template-client-application.git",
     "directory": "/"
+  },
+  "homepage": "https://github.com/x447618716/cra-template-client-application",
+  "author": {
+    "name": "xierongsheng",
+    "email": "447618716@qq.com",
+    "url": "https://xierongsheng.gitee.io/blog/"
   },
   "license": "MIT",
   "engines": {
