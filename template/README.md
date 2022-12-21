@@ -1,6 +1,6 @@
-# Getting Started with Create React App and Redux
+# Getting Started with Create React App and Redux and React Route
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template and [React Route](https://reactrouter.com/en/main) and [redux-persist](https://github.com/rt2zz/redux-persist#readme) and [axios](https://axios-http.com/) and UI library [Ant Design](https://ant.design/).
 
 ## Available Scripts
 
@@ -28,6 +28,18 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run analyze`
+
+Analyzing the Bundle Size,
+
+Step: Run the production build first and then run the analysis script
+
+```
+npm run build
+npm run analyze
+```
+
 
 ### `npm run eject`
 
