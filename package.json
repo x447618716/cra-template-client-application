@@ -31,7 +31,9 @@
     "url": "https://github.com/x447618716/cra-template-client-application/issues"
   },
   "files": [
-    "template",
+    "template/public",
+    "template/src",
+    "template/README.md",
     "template.json"
   ]
 }

@@ -3,6 +3,7 @@
 .idea
 # dependencies
 /node_modules
+/template/node_modules
 /.pnp
 .pnp.js
 

@@ -3,7 +3,7 @@ import {createHashRouter} from "react-router-dom";
 
 const Layout = lazy(() => import(/* webpackChunkName: "layout" */'../components/layout/Layout'))
 const NoFound = lazy(() => import(/* webpackChunkName: "404" */'../views/NoFound'))
-const NoAuthorized = lazy(() => import(/* webpackChunkName: "404" */'../views/NoAuthorized'))
+const NoAuthorized = lazy(() => import(/* webpackChunkName: "403" */'../views/NoAuthorized'))
 const Login = lazy(() => import(/* webpackChunkName: "login" */'../views/Login'))
 const Home = lazy(() => import(/* webpackChunkName: "home" */'../views/home/Home'))
 
