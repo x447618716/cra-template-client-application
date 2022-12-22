@@ -1,8 +1,8 @@
 import React, {Suspense} from 'react';
 import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react'
-import {store,persistor} from './stores';
+import {PersistGate} from 'redux-persist/integration/react'
+import {store, persistor} from './stores';
 import App from './App';
 import ErrorBoundary from './components/global/ErrorBoundary'
 import {ConfigProvider, Space, Spin} from 'antd';
@@ -20,21 +20,21 @@ const root = createRoot(container);
 
 root.render(
     <React.StrictMode>
-        <ConfigProvider locale={zhCN}>
-            <ErrorBoundary>
-                <Suspense fallback={
-                    <Space size="middle">
-                        <Spin tip="Loading" size="large"/>
-                    </Space>
-                }>
-                    <Provider store={store}>
-                        <PersistGate loading={null} persistor={persistor}>
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <ConfigProvider locale={zhCN}>
+                    <ErrorBoundary>
+                        <Suspense fallback={
+                            <Space size="middle">
+                                <Spin tip="Loading" size="large"/>
+                            </Space>
+                        }>
                             <App/>
-                        </PersistGate>
-                    </Provider>
-                </Suspense>
-            </ErrorBoundary>
-        </ConfigProvider>
+                        </Suspense>
+                    </ErrorBoundary>
+                </ConfigProvider>
+            </PersistGate>
+        </Provider>
     </React.StrictMode>
 );
 
