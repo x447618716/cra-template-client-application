@@ -33,6 +33,7 @@
   "files": [
     "template/public",
     "template/src",
+    "template/gitignore",
     "template/README.md",
     "template.json"
   ]
