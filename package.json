@@ -1,6 +1,7 @@
 {
   "name": "cra-template-client-application",
-  "version": "1.0.2",
+  "description": "The base client template for Create React App.",
+  "version": "1.0.3",
   "keywords": [
     "react",
     "create-react-app",
@@ -11,7 +12,6 @@
     "axios",
     "ant design"
   ],
-  "description": "The base client template for Create React App.",
   "repository": {
     "type": "git",
     "url": "https://github.com/x447618716/cra-template-client-application.git",

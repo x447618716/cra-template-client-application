@@ -10,7 +10,17 @@ import axios from "../axios";
  * @inheritDoc
  * @return
  * */
-export const login = ({name,password}) => axios.post("/test/login", {
+export const login = ({name,password}) => axios.post("/test/login",{
     name,
     password
 });
+
+/**
+ * 退出
+ * @author 谢荣生
+ * @version 1.0.0
+ * @datetime 2022-11-25 11:27:16
+ * @inheritDoc
+ * @return
+ * */
+export const loginOut= () => axios.post("/test/loginOut");

@@ -9,6 +9,8 @@ Opinionated quickstart [Create React App](https://github.com/facebook/create-rea
 * [redux-persist](https://github.com/rt2zz/redux-persist#readme) Used for state persistence
 * [React Route](https://reactrouter.com/en/main) for navigation
 * [axios](https://axios-http.com/) for requests
+* [Mock](http://mockjs.com/) for to simulate requests
+* Routing authentication
 
 
 

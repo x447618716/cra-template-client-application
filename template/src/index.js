@@ -4,8 +4,10 @@ import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react'
 import {store, persistor} from './stores';
 import App from './App';
+import {HashRouter} from "react-router-dom";
 import ErrorBoundary from './components/global/ErrorBoundary'
-import {ConfigProvider, Space, Spin} from 'antd';
+import {ConfigProvider} from 'antd';
+import Loading from './components/global/Loading'
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 import zhCN from 'antd/locale/zh_CN';
@@ -14,6 +16,8 @@ import './assets/css/common.css'
 import reportWebVitals from './reportWebVitals';
 
 dayjs.locale('zh-cn');
+
+require("./mock")
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -24,12 +28,10 @@ root.render(
             <PersistGate loading={null} persistor={persistor}>
                 <ConfigProvider locale={zhCN}>
                     <ErrorBoundary>
-                        <Suspense fallback={
-                            <Space size="middle">
-                                <Spin tip="Loading" size="large"/>
-                            </Space>
-                        }>
-                            <App/>
+                        <Suspense fallback={Loading()}>
+                            <HashRouter>
+                                <App/>
+                            </HashRouter>
                         </Suspense>
                     </ErrorBoundary>
                 </ConfigProvider>

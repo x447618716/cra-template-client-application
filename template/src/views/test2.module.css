@@ -2,6 +2,10 @@
     height: 65px;
     text-align: center;
     line-height: 65px;
-    font-size: 35px;
+    font-size: 120px;
     color: chartreuse;
+}
+.warp{
+    width: 100%;
+    height: 100vh;
 }

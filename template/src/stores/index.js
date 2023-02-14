@@ -10,7 +10,6 @@ import {
     REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import logger from 'redux-logger'
 
 import rootReducer from './reducer'
 
@@ -30,7 +29,7 @@ export const store = configureStore({
         getDefaultMiddleware({
             serializableCheck: {ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
-    }).concat(logger),
+    }).concat(),
 });
 
 export const persistor = persistStore(store)

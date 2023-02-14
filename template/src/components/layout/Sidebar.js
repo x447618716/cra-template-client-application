@@ -1,7 +1,6 @@
 import React from 'react';
 import { Layout, Menu} from 'antd'
 import {
-    BarChartOutlined,
     UserOutlined,
     VideoCameraOutlined,
 } from '@ant-design/icons';
@@ -30,13 +29,13 @@ const items = [
                 key:"1-3",
                 label: <NavLink to="/404">404</NavLink>,
                 icon: React.createElement(VideoCameraOutlined),
+            },
+            {
+                key:"1-4",
+                label: <NavLink to="/havePermissions">权限查看</NavLink>,
+                icon: React.createElement(VideoCameraOutlined),
             }
         ]
-    },
-    {
-        key:"2",
-        label: <NavLink to="/login">登录页</NavLink>,
-        icon: React.createElement(BarChartOutlined),
     }
 ]
 
