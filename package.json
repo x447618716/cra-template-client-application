@@ -1,7 +1,7 @@
 {
   "name": "cra-template-client-application",
   "description": "The base client template for Create React App.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "keywords": [
     "react",
     "create-react-app",
