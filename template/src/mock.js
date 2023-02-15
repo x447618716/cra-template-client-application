@@ -32,7 +32,7 @@ Mock.mock(`${axios.defaults.baseURL}/test/login`, 'post', function (options) {
     }else{
         return {
             code: 500,
-            message: "用户名或密码错误,请使用->用户名：13148087 密码：654321 进行查看"
+            message: "用户名或密码错误,请使用->有权限-用户名：13148087 密码：654321 | 无权限-用户名：test 密码：654321 进行查看"
         }
     }
 })
