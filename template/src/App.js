@@ -1,9 +1,12 @@
+import {HashRouter} from "react-router-dom";
 import Router from "./router"
 
 function App() {
-  return (
-      <Router/>
-  );
+    return (
+        <HashRouter>
+            <Router/>
+        </HashRouter>
+    );
 }
 
 export default App;

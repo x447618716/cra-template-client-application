@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react'
 import {store, persistor} from './stores';
 import App from './App';
-import {HashRouter} from "react-router-dom";
 import ErrorBoundary from './components/global/ErrorBoundary'
 import {ConfigProvider} from 'antd';
 import Loading from './components/global/Loading'
@@ -29,9 +28,7 @@ root.render(
                 <ConfigProvider locale={zhCN}>
                     <ErrorBoundary>
                         <Suspense fallback={Loading()}>
-                            <HashRouter>
-                                <App/>
-                            </HashRouter>
+                            <App/>
                         </Suspense>
                     </ErrorBoundary>
                 </ConfigProvider>

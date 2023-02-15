@@ -2,7 +2,6 @@ import {lazy} from 'react';
 import {useRoutes} from "react-router-dom";
 import {store} from "../stores/index";
 import {useSelector} from "react-redux";
-//import cloneDeep from 'lodash/cloneDeep'
 
 const Layout = lazy(() => import(/* webpackChunkName: "layout" */'../components/layout/Layout'))
 const NoFound = lazy(() => import(/* webpackChunkName: "404" */'../views/NoFound'))
@@ -16,11 +15,11 @@ const HavePermissions = lazy(() => import(/* webpackChunkName: "HavePermissions"
 const permissionRouter = [
     {
         path: '/havePermissions',
-        element: "有权限"
+        element: <HavePermissions/>,
+        permission: <HavePermissions/>
     }
 ]
 
-//const cloneDeepObj =  cloneDeep(permissionRouter);
 
 /**
  *  在此只实现简单的路由策略  对于深层嵌套的路由需要自行编写递归方法来实现
@@ -28,7 +27,9 @@ const permissionRouter = [
 const addRouterPermission = (menuRouter, permissionRouter) => {
     permissionRouter.forEach(item => {
         if (menuRouter.findIndex(obj => obj.url === item.path) === -1) {
-            item.element = "没有权限"
+            item.element = <NoAuthorized/>
+        } else {
+            item.element = item.permission
         }
     })
     return permissionRouter
