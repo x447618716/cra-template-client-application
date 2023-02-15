@@ -11,6 +11,7 @@ Opinionated quickstart [Create React App](https://github.com/facebook/create-rea
 * [axios](https://axios-http.com/) for requests
 * [Mock](http://mockjs.com/) for to simulate requests
 * Routing authentication
+* Listen for route changes
 
 
 
