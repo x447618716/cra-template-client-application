@@ -1,5 +1,5 @@
-import {lazy} from 'react';
-import {useRoutes} from "react-router-dom";
+import {lazy, useEffect, useState} from 'react';
+import {useRoutes, useLocation, useNavigate} from "react-router-dom";
 import {store} from "../stores/index";
 import {useSelector} from "react-redux";
 
@@ -35,9 +35,22 @@ const addRouterPermission = (menuRouter, permissionRouter) => {
     return permissionRouter
 }
 
-
 export default function Router() {
     let token = store.getState().global.token;
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [temp, setTemp] = useState(null);
+    //防止多次渲染死循环造成React内部机制报错
+    setTimeout(() => {
+        setTemp(location.pathname);
+    })
+
+    //导航发生变化时与未登录下导航到登录页
+    useEffect(() => {
+        if (!token) {
+            navigate("/login")
+        }
+    }, [temp, navigate, token])
     let permissionList = useSelector((state) => state.global.permissionList);
     let dynamicRoutes = addRouterPermission(permissionList, permissionRouter)
     const basicRoute = useRoutes([
